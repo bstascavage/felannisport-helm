@@ -1,0 +1,24 @@
+service:
+  ## Add annotations to service
+  # annotations: {}
+  type: LoadBalancer
+  ## Add IP Cluster
+  # clusterIP: ""
+  ## Add external IPs that route to one or more cluster nodes
+  # externalIPs: []
+  ## Specify LoadBalancer IP (only allow on some cloud provider)
+  # loadBalancerIP: ""
+  ## Allow source IPs to access on service (if empty, any access allow)
+  # loadBalancerSourceRanges: []
+
+persistence:
+  enabled: false
+
+ingress:
+  enabled: true
+  tls: false
+  # secretName: my-tls-cert # only needed if tls above is true
+  hostname: influxdb.felannisport.com
+  annotations:
+    # kubernetes.io/ingress.class: "nginx"
+    # kubernetes.io/tls-acme: "true"
