@@ -12,7 +12,13 @@ service:
   # loadBalancerSourceRanges: []
 
 persistence:
-  enabled: false
+  enabled: true
+  useExisting: false
+  ## Name of existing PVC to be used in the influx deployment
+  #name: influxdb-pvc
+  storageClassName: nfs-client
+  accessMode: ReadWriteOnce
+  size: 8Gi
 
 ingress:
   enabled: true

@@ -18,3 +18,14 @@ ingress:
     - secretName: letsencrypt-grafana
       hosts:
         - grafana.felannisport.com
+
+persistence:
+  enabled: true
+  initChownData: true
+  # storageClassName: default
+  #accessModes:
+  #  - ReadWriteOnce
+  #size: 10Gi
+  # annotations: {}
+  # subPath: ""
+  existingClaim: grafana-pvc
