@@ -1,0 +1,46 @@
+dex-k8s-authenticator:
+  # Default values for dex-k8s-authenticator.
+
+  replicaCount: 1
+
+  dexK8sAuthenticator:
+    #port: 5555
+    #debug: false
+    web_path_prefix: /
+    #logoUrl: http://<path-to-your-logo.png>
+    #tlsCert: /path/to/dex-client.crt
+    #tlsKey: /path/to/dex-client.key
+    clusters:
+    - name: felannisport
+      short_description: "Felannisport"
+      description: "Felannisport Kubernetes Login"
+      issuer: https://dex.felannisport.com
+      k8s_master_uri: https://192.168.1.245:6443
+      client_id: dex-secret
+      client_secret: ZXhhbXBsZS1hcHAtc2VjcmV0
+      redirect_uri: https://login.felannisport.com/callback/
+
+  service:
+    annotations: {}
+    type: LoadBalancer
+
+  ingress:
+    enabled: true
+    annotations:
+      ingress.kubernetes.io/ssl-redirect: "true"
+      kubernetes.io/tls-acme: "true"
+      certmanager.k8s.io/issuer: letsencrypt-dex
+      kubernetes.io/ingress.class: "nginx"
+    path: /
+    hosts:
+      - login.felannisport.com
+    tls:
+      - secretName: letsencrypt-login-tls
+        hosts:
+          - login.felannisport.com
+
+  resources: {}
+
+  caCerts:
+    enabled: false
+    secrets: {}
