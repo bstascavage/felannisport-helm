@@ -36,6 +36,7 @@ grafana:
       auth_url: https://dex.felannisport.com/auth
       client_id: dex-grafana
       enabled: true
+      name: dex
       scopes: openid email profile groups
       token_url: https://dex.felannisport.com/token
     server:
