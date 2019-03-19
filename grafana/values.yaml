@@ -29,3 +29,14 @@ grafana:
     size: 5Gi
     # annotations: {}
     # subPath: ""
+
+  grafana.ini:
+    auth.generic_oauth:
+      allow_sign_up: true
+      auth_url: https://dex.felannisport.com/auth
+      client_id: dex-grafana
+      enabled: true
+      scopes: openid email profile groups
+      token_url = https://dex.felannisport.com/token
+    server:
+      root_url: https://grafana.felannisport.com
