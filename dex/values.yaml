@@ -3,12 +3,12 @@ dex:
   # This is a YAML-formatted file.
   # Declare name/value pairs to be passed into your templates.
   # name: value
-    
+
   replicas: 1
-    
+
   service:
     type: LoadBalancer
-    
+
   ingress:
     enabled: true
     annotations:
@@ -22,64 +22,66 @@ dex:
     tls:
       - secretName: letsencrypt-dex-tls
         hosts:
-        - dex.felannisport.com
-    
-    serviceAccount:
-      create: true
-      name: dex-auth-sa
-    
-    config:
-      issuer: https://dex.felannisport.com
-      storage:
-        type: kubernetes
-        config:
-          inCluster: true
-      logger:
-        level: debug
-      web:
-        http: 0.0.0.0:8080
-      grpc:
-        addr: 0.0.0.0:5000
-      frontend:
-        theme: "coreos"
-        issuer: "Felannisport SSO"
-        issuerUrl: "https://felannisport.com"
-        logoUrl: https://felannisport.com/images/logo-250x25.png
-      expiry:
-        signingKeys: "6h"
-        idTokens: "24h"
-      logger:
-        level: debug
-        format: json
-      oauth2:
-        responseTypes: ["code", "token", "id_token"]
-        skipApprovalScreen: true
-      connectors:
-      - type: oidc
-        id: google
-        name: Google
-        config:
-          issuer: https://accounts.google.com
-          clientID: "70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com"
-          clientSecret: "6W21kd_P8arp2f2hlOQuLfGm"
-          redirectURI: https://dex.felannisport.com/callback
-          hostedDomains:
+          - dex.felannisport.com
+
+  serviceAccount:
+    create: true
+    name: dex-auth-sa
+
+  config:
+    issuer: https://dex.felannisport.com
+    storage:
+      type: kubernetes
+      config:
+        inCluster: true
+    logger:
+      level: debug
+    web:
+      http: 0.0.0.0:8080
+    grpc:
+      addr: 0.0.0.0:5000
+    frontend:
+      theme: "coreos"
+      issuer: "Felannisport SSO"
+      issuerUrl: "https://felannisport.com"
+      logoUrl: https://felannisport.com/images/logo-250x25.png
+    expiry:
+      signingKeys: "6h"
+      idTokens: "24h"
+    logger:
+      level: debug
+      format: json
+    oauth2:
+      responseTypes: ["code", "token", "id_token"]
+      skipApprovalScreen: true
+    connectors:
+    - type: oidc
+      id: google
+      name: Google
+      config:
+        issuer: https://accounts.google.com
+        clientID: "70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com"
+        clientSecret: "6W21kd_P8arp2f2hlOQuLfGm"
+        redirectURI: https://dex.felannisport.com/callback
+        hostedDomains:
           - stascavage.com
-    
-      staticClients:
-      - id: dex-secret
-        name: dex-secret
-        secret: ZXhhbXBsZS1hcHAtc2VjcmV0
-        redirectURIs:
-        - "https://login.felannisport.com/callback/"
-      - id: dex-secret-argocd
-        name: dex-argocd
-        secret: ZXhhbXBsZS1hcHAtc2VjcmV0
-        redirectURIs:
-        - "https://argocd.felannisport.com/auth/callback"
-        - "http://localhost:8085/auth/callback"
-      - id: dex-grafana
-        name: dex-grafana
-        secret: ZXhhbXBsZS1hcHAtc2VjcmV0sdleojfdpoounwes
-        redirectURIs:
-        - "https://grafana.felannisport.com/login/generic_oauth"
+
+    staticClients:
+    - id: dex-secret
+      name: dex-secret
+      secret: ZXhhbXBsZS1hcHAtc2VjcmV0
+      redirectURIs:
+      - "https://login.felannisport.com/callback/"
+    - id: dex-secret-argocd
+      name: dex-argocd
+      secret: ZXhhbXBsZS1hcHAtc2VjcmV0
+      redirectURIs:
+      - "https://argocd.felannisport.com/auth/callback"
+      - "http://localhost:8085/auth/callback"
+    - id: dex-grafana
+      name: dex-grafana
+      secret: ZXhhbXBsZS1hcHAtc2VjcmV0sdleojfdpoounwes
+      redirectURIs:
+      - "https://grafana.felannisport.com/login/generic_oauth"
+
+    enablePasswordDB: true
