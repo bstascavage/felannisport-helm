@@ -1,4 +1,4 @@
 dependencies:
 - name: dex-k8s-authenticator
   version: 1.0.0
-  repository: https://raw.githubusercontent.com/mintel/dex-k8s-authenticator/feat-helm-repo/charts/repo/stable
+  repository: mintel
