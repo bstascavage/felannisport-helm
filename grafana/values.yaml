@@ -23,10 +23,9 @@ grafana:
   persistence:
     enabled: true
     initChownData: true
-    # storageClassName: default
-    #accessModes:
-    #  - ReadWriteOnce
-    #size: 10Gi
+    storageClassName: nfs-client
+    accessModes:
+      - ReadWriteOnce
+    size: 5Gi
     # annotations: {}
     # subPath: ""
-    existingClaim: grafana-pvc
