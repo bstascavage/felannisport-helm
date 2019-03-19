@@ -35,6 +35,7 @@ grafana:
       allow_sign_up: true
       auth_url: https://dex.felannisport.com/auth
       client_id: dex-grafana
+      client_secret: ZXhhbXBsZS1hcHAtc2VjcmV0sdleojfdpoounwes
       enabled: true
       name: dex
       scopes: openid email profile groups
