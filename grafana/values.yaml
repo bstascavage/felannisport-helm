@@ -37,6 +37,6 @@ grafana:
       client_id: dex-grafana
       enabled: true
       scopes: openid email profile groups
-      token_url = https://dex.felannisport.com/token
+      token_url: https://dex.felannisport.com/token
     server:
       root_url: https://grafana.felannisport.com
