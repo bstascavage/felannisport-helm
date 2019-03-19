@@ -39,5 +39,7 @@ grafana:
       name: dex
       scopes: openid email profile groups
       token_url: https://dex.felannisport.com/token
+    log:
+      level: debug
     server:
       root_url: https://grafana.felannisport.com
