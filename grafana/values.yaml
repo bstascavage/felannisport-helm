@@ -43,3 +43,8 @@ grafana:
       level: debug
     server:
       root_url: https://grafana.felannisport.com
+    paths:
+      data: /var/lib/grafana/data
+      logs: /var/log/grafana
+      plugins: /var/lib/grafana/plugins
+      provisioning: /etc/grafana/provisioning
