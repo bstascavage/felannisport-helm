@@ -1,4 +1,4 @@
 dependencies:
-- name: nfs-provisioner
-  version: 3.1.0
+- name: nfs-client-provisioner
+  version: 1.2.3
   repository: https://kubernetes-charts.storage.googleapis.com
