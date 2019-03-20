@@ -55,11 +55,11 @@ grafana:
 
   datasources:
     datasources.yaml:
-    apiVersion: 1
-    datasources:
-    - name: Smartthings
-      type: influxdb
-      url: http://influxdb.felannisport.com
-      access: proxy
-      database: smartthings
-      editable: true
+      apiVersion: 1
+      datasources:
+      - name: Smartthings
+        type: influxdb
+        url: http://influxdb.felannisport.com
+        access: proxy
+        database: smartthings
+        editable: true
