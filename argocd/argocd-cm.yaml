@@ -1,0 +1,30 @@
+apiVersion: v1
+data:
+  helm.repositories: |
+    - url: https://raw.githubusercontent.com/bstascavage/dex-k8-authenticator-repo/master
+      name: mintel
+  oidc.config: |
+    name: Google
+    issuer: https://dex.felannisport.com
+    clientID: dex-secret-argocd
+    clientSecret: ZXhhbXBsZS1hcHAtc2VjcmV0
+  repositories: |
+    - passwordSecret:
+        key: password
+        name: repo-felannisport-helm-3834629330
+      url: https://github.com/bstascavage/felannisport-helm
+      usernameSecret:
+        key: username
+        name: repo-felannisport-helm-3834629330
+  url: https://argocd.felannisport.com
+kind: ConfigMap
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"ConfigMap","metadata":{"annotations":{},"name":"argocd-cm","namespace":"argocd"}}
+  creationTimestamp: "2019-03-13T02:47:29Z"
+  name: argocd-cm
+  namespace: argocd
+  resourceVersion: "2859625"
+  selfLink: /api/v1/namespaces/argocd/configmaps/argocd-cm
+  uid: 57b2393a-453a-11e9-bbe8-00306730d4ed
