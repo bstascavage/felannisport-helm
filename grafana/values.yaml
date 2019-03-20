@@ -64,6 +64,21 @@ grafana:
         database: smartthings
         editable: true
 
+  dashboardProviders: {}
+    dashboardproviders.yaml:
+      apiVersion: 1
+      providers:
+      - name: 'default'
+        orgId: 1
+        folder: ''
+        type: file
+        disableDeletion: false
+        editable: true
+        options:
+          path: /var/lib/grafana/dashboards/default
+
+
   dashboards:
-    home-devices:
-      url: https://raw.githubusercontent.com/bstascavage/grafana-dashboards/master/Home%20Devices.json
+    default:
+      home-devices:
+        url: https://raw.githubusercontent.com/bstascavage/grafana-dashboards/master/Home%20Devices.json
