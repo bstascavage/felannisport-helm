@@ -37,7 +37,7 @@ grafana:
       client_id: dex-grafana
       client_secret: ZXhhbXBsZS1hcHAtc2VjcmV0sdleojfdpoounwes
       enabled: true
-      name: dex
+      name: Google SSO
       scopes: openid email profile groups
       token_url: https://dex.felannisport.com/token
     log:
