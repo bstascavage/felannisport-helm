@@ -31,7 +31,7 @@ grafana:
     # subPath: ""
 
   adminUser: admin
-    adminPassword: admin
+  adminPassword: admin
 
   grafana.ini:
     auth.generic_oauth:
