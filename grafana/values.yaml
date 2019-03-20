@@ -63,3 +63,8 @@ grafana:
         access: proxy
         database: smartthings
         editable: true
+
+  dashboards:
+    default:
+      home-devices:
+        url: https://raw.githubusercontent.com/bstascavage/grafana-dashboards/master/Home%20Devices.json
