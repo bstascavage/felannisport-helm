@@ -20,15 +20,15 @@ grafana:
         hosts:
           - grafana.felannisport.com
 
-  persistence:
-    enabled: true
-    initChownData: true
-    storageClassName: nfs-client
-    accessModes:
-      - ReadWriteOnce
-    size: 5Gi
-    # annotations: {}
-    # subPath: ""
+#  persistence:
+#    enabled: true
+#    initChownData: true
+#    storageClassName: nfs-client
+#    accessModes:
+#      - ReadWriteOnce
+#    size: 5Gi
+#    # annotations: {}
+#    # subPath: ""
 
   grafana.ini:
     security:
