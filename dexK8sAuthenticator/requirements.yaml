@@ -1,4 +1,4 @@
 dependencies:
 - name: dex-k8s-authenticator
   version: 1.0.0
-  repository: @mintel
+  repository: https://raw.githubusercontent.com/bstascavage/dex-k8-authenticator-repo/master/
