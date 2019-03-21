@@ -46,3 +46,9 @@ influxdb:
       # password:
 
       privileges: "WITH ALL PRIVILEGES"
+
+  config:
+    http:
+      enabled: true
+      bind_address: 8086
+      auth_enabled: true
