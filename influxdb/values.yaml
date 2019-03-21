@@ -31,7 +31,7 @@ influxdb:
       # kubernetes.io/tls-acme: "true"
 
   setDefaultUser:
-    enabled: false
+    enabled: true
 
     image: appropriate/curl:latest
     activeDeadline: 300
