@@ -29,3 +29,20 @@ influxdb:
     annotations:
       kubernetes.io/ingress.class: "nginx"
       # kubernetes.io/tls-acme: "true"
+
+  setDefaultUser:
+    enabled: false
+
+    image: appropriate/curl:latest
+    activeDeadline: 300
+    restartPolicy: OnFailure
+
+    user:
+      username: "admin"
+
+      ## User password
+      ## single quotes must be escaped (\')
+      ## Default: (Randomly generated 10 characters of AlphaNum)
+      # password:
+
+      privileges: "WITH ALL PRIVILEGES"
