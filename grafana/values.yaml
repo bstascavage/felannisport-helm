@@ -59,7 +59,7 @@ grafana:
       datasources:
       - name: Smartthings
         type: influxdb
-        url: http://influxdb.felannisport.com
+        url: http://influxdb.felannisport.com:8086
         access: proxy
         database: smartthings
         editable: true
