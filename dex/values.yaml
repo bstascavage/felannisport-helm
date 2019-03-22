@@ -22,6 +22,9 @@ ingress:
     - secretName: letsencrypt-dex-tls
       hosts:
         - dex.felannisport.com
+rbac:
+  # Specifies whether RBAC resources should be created
+  create: true
 
 serviceAccount:
   create: true
