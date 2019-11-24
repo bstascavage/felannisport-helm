@@ -113,8 +113,8 @@ config:
     name: Google
     config:
       issuer: https://accounts.google.com
-      clientID: $GOOGLE_CLIENT_ID
-      clientSecret: $GOOGLE_CLIENT_SECRET
+      clientID: "70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com"
+      clientSecret: "dUs-kgqIESFRiWGSoorXxf-V"
 #      clientID: 
 #      - secretKeyRef:
 #        name: google-oidc
