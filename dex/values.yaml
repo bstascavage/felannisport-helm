@@ -113,14 +113,16 @@ config:
     name: Google
     config:
       issuer: https://accounts.google.com
-      clientID: 
-      - secretRef:
-        name: google-oidc
-        key: client_id
-      clientSecret:
-      - secretRef:
-        name: google-oidc
-        key: client_secret
+      clientID: $GOOGLE_CLIENT_ID
+      clientSecret: $GOOGLE_CLIENT_SECRET
+#      clientID: 
+#      - secretKeyRef:
+#        name: google-oidc
+#        key: client_id
+#      clientSecret:
+#      - secretKeyRef:
+#        name: google-oidc
+#        key: client_secret
       redirectURI: https://dex.felannisport.com/callback
       hostedDomains:
         - stascavage.com
@@ -158,3 +160,7 @@ config:
 #    hash: "$2a$10$2b2cU8CPhOTaGrs1HRQuAueS7JTT5ZHsHSzYiFPm1leZck7Mc8T4W"
 #    username: "admin"
 #    userID: "08a8684b-db88-4b73-90a9-3cd1661f5466"
+
+envSecrets:
+  GOOGLE_CLIENT_ID: 70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com
+  GOOGLE_CLIENT_SECRET: dUs-kgqIESFRiWGSoorXxf-V
