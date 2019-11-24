@@ -90,7 +90,10 @@ env:
         name: google-oidc
         key: client_id
   - name: GOOGLE_CLIENT_SECRET
-    value: "dUs-kgqIESFRiWGSoorXxf-V"
+    valueFrom:
+      secretKeyRef:
+        name: google-oidc
+        key: client_secret
 
 rbac:
   # Specifies whether RBAC resources should be created
