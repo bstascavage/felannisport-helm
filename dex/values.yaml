@@ -77,7 +77,10 @@ certs:
 extraVolumes: []
 extraVolumeMounts: []
 
-env: []
+env: [
+GOOGLE_CLIENT_ID: 70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com,
+GOOGLE_CLIENT_SECRET: dUs-kgqIESFRiWGSoorXxf-V
+]
 
 rbac:
   # Specifies whether RBAC resources should be created
@@ -113,8 +116,10 @@ config:
     name: Google
     config:
       issuer: https://accounts.google.com
-      clientID: "70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com"
-      clientSecret: "dUs-kgqIESFRiWGSoorXxf-V"
+      clientID: $GOOGLE_CLIENT_ID
+      clientSecret: $GOOGLE_CLIENT_SECRET
+#      clientID: "70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com"
+#      clientSecret: "dUs-kgqIESFRiWGSoorXxf-V"
 #      clientID: 
 #      - secretKeyRef:
 #        name: google-oidc
