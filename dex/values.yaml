@@ -161,6 +161,6 @@ config:
 #    username: "admin"
 #    userID: "08a8684b-db88-4b73-90a9-3cd1661f5466"
 
-env:
-  GOOGLE_CLIENT_ID: 70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com
-  GOOGLE_CLIENT_SECRET: dUs-kgqIESFRiWGSoorXxf-V
+#env:
+#  GOOGLE_CLIENT_ID: 70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com
+#  GOOGLE_CLIENT_SECRET: dUs-kgqIESFRiWGSoorXxf-V
