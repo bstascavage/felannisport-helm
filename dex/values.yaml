@@ -80,6 +80,8 @@ extraVolumeMounts: []
 env:
   - name: GOOGLE_CLIENT_ID
     value: "70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com"
+  - name: GOOGLE_CLIENT_SECRET
+    value: "dUs-kgqIESFRiWGSoorXxf-V"
 
 rbac:
   # Specifies whether RBAC resources should be created
