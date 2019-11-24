@@ -78,8 +78,7 @@ extraVolumes: []
 extraVolumeMounts: []
 
 env: [
-GOOGLE_CLIENT_ID: 70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com,
-GOOGLE_CLIENT_SECRET: dUs-kgqIESFRiWGSoorXxf-V
+GOOGLE_CLIENT_ID: 70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com
 ]
 
 rbac:
