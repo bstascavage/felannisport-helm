@@ -77,9 +77,18 @@ certs:
 extraVolumes: []
 extraVolumeMounts: []
 
+#env:
+#  - name: GOOGLE_CLIENT_ID
+#    value: "70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com"
+#  - name: GOOGLE_CLIENT_SECRET
+#    value: "dUs-kgqIESFRiWGSoorXxf-V"
+
 env:
   - name: GOOGLE_CLIENT_ID
-    value: "70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com"
+    valueFrom:
+      secretKeyRef:
+        name: google-oidc
+        key: client_id
   - name: GOOGLE_CLIENT_SECRET
     value: "dUs-kgqIESFRiWGSoorXxf-V"
 
