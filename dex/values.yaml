@@ -113,8 +113,14 @@ config:
     name: Google
     config:
       issuer: https://accounts.google.com
-      clientID: "70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com"
-      clientSecret: "6W21kd_P8arp2f2hlOQuLfGm"
+      clientID: 
+      - secretRef:
+        name: google-oidc
+        key: client_id
+      clientSecret:
+      - secretRef:
+        name: google-oidc
+        key: client_secret
       redirectURI: https://dex.felannisport.com/callback
       hostedDomains:
         - stascavage.com
