@@ -77,9 +77,9 @@ certs:
 extraVolumes: []
 extraVolumeMounts: []
 
-env: [
-GOOGLE_CLIENT_ID: 70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com
-]
+env:
+  - name: GOOGLE_CLIENT_ID
+    value: "70925338276-1bd3q778hgj4konlhrculovv0ttng1f4.apps.googleusercontent.com"
 
 rbac:
   # Specifies whether RBAC resources should be created
