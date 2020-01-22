@@ -8,14 +8,6 @@ data:
     issuer: https://dex.felannisport.com
     clientID: dex-secret-argocd
     clientSecret: ZXhhbXBsZS1hcHAtc2VjcmV0
-  repositories: |
-    - passwordSecret:
-        key: password
-        name: repo-felannisport-helm-3834629330
-      url: https://github.com/bstascavage/felannisport-helm
-      usernameSecret:
-        key: username
-        name: repo-felannisport-helm-3834629330
   url: https://argocd.felannisport.com
 kind: ConfigMap
 metadata:
