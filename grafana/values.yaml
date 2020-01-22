@@ -82,6 +82,6 @@ grafana:
   dashboards:
     default:
       home-devices:
-        json: dashboards/home-devices.json
-        #url: https://raw.githubusercontent.com/bstascavage/felannisport-helm/master/grafana/dashboards/home-devices.json
+        #file: dashboards/home-devices.json
+        url: https://raw.githubusercontent.com/bstascavage/felannisport-helm/master/grafana/dashboards/home-devices.json
         #url: https://raw.githubusercontent.com/bstascavage/grafana-dashboards/master/Home%20Devices.json
