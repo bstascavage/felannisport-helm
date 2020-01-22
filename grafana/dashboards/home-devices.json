@@ -98,7 +98,7 @@
         "alerting",
         "no_data"
       ],
-      "title": "Alerts1",
+      "title": "Alerts",
       "type": "alertlist"
     },
     {
@@ -5326,5 +5326,5 @@
   "timezone": "browser",
   "title": "Home Devices",
   "uid": "000000004",
-  "version": 12
+  "version": 13
 }
