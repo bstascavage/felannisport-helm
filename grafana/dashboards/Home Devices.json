@@ -76,6 +76,7 @@
     },
     {
       "dashboardFilter": "",
+      "dashboardTags": [],
       "datasource": null,
       "description": "List of dashboard alerts for the apartment.",
       "folderId": null,
@@ -97,7 +98,7 @@
         "alerting",
         "no_data"
       ],
-      "title": "Alerts",
+      "title": "Alerts1",
       "type": "alertlist"
     },
     {
@@ -5325,5 +5326,5 @@
   "timezone": "browser",
   "title": "Home Devices",
   "uid": "000000004",
-  "version": 11
+  "version": 12
 }
