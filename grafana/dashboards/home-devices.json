@@ -71,7 +71,7 @@
       },
       "id": 34,
       "panels": [],
-      "title": "Alerts123",
+      "title": "Alerts",
       "type": "row"
     },
     {
@@ -98,7 +98,7 @@
         "alerting",
         "no_data"
       ],
-      "title": "Alerts222",
+      "title": "Alerts",
       "type": "alertlist"
     },
     {
