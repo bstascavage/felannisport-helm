@@ -7,8 +7,9 @@ grafana:
     annotations:
       ingress.kubernetes.io/ssl-redirect: "true"
       kubernetes.io/tls-acme: "true"
-      certmanager.k8s.io/issuer: letsencrypt
+      cert-manager.io/cluster-issuer: letsencrypt
       kubernetes.io/ingress.class: "nginx"
+      certmanager.k8s.io/acme-http01-edit-in-place: "true"
       # kubernetes.io/ingress.class: nginx
       # kubernetes.io/tls-acme: "true"
     labels: {}
