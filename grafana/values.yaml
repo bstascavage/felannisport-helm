@@ -82,5 +82,5 @@ grafana:
   dashboards:
     default:
       home-devices:
-        file: dashboards/home-devices.json
+        json: dashboards/home-devices.json
         #url: https://raw.githubusercontent.com/bstascavage/grafana-dashboards/master/Home%20Devices.json
