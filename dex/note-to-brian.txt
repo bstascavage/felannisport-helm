@@ -1,0 +1,1 @@
+This chart is a copy of the dex chart, instead of building it as a depdendecy.  That is because, as of 1/22/20, the dex chart does not deploy the ingress if you build it as a dependecy.  It is because it is using v1beta1/ingress, though for the life of me I can't figure out why that is different between building it as a dependency and running it as `helm install stable/dex`
