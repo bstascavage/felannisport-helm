@@ -43,10 +43,30 @@ ports:
   web:
     containerPort: 8080
     protocol: TCP
+    nodePort: 32000
+    servicePort: 32000
 # Relevant only when grpc support is enabled
   grpc:
     containerPort: 5000
     protocol: TCP
+    nodePort: 35000
+    servicePort: 35000
+
+livenessProbe:
+  enabled: true
+  initialDelaySeconds: 1
+  failureThreshold: 1
+  httpPath: "/healthz"
+  periodSeconds: 10
+  timeoutSeconds: 1
+
+readinessProbe:
+  enabled: true
+  initialDelaySeconds: 1
+  failureThreshold: 1
+  httpPath: "/healthz"
+  periodSeconds: 10
+  timeoutSeconds: 1
 
 service:
   type: LoadBalancer
