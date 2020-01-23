@@ -9,6 +9,11 @@ data:
     clientID: dex-secret-argocd
     clientSecret: ZXhhbXBsZS1hcHAtc2VjcmV0
   url: https://argocd.felannisport.com
+  resource.customizations: |
+    admissionregistration.k8s.io/MutatingWebhookConfiguration:
+      ignoreDifferences: |
+        jsonPointers:
+        - /webhooks/0/clientConfig/caBundle
 kind: ConfigMap
 metadata:
   annotations:
