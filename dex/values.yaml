@@ -179,8 +179,8 @@ config:
   web:
     # port is taken from ports section above
     address: 0.0.0.0
-#    tlsCert: /etc/dex/tls/https/server/tls.crt
-#    tlsKey: /etc/dex/tls/https/server/tls.key
+    tlsCert: /etc/dex/tls/https/server/tls.crt
+    tlsKey: /etc/dex/tls/https/server/tls.key
 # Section below is relevant only when grpc support is enabled
   grpc:
     # port is taken from ports section above
@@ -214,7 +214,7 @@ config:
 #    name: 'Example App'
 #    secret: ZXhhbXBsZS1hcHAtc2VjcmV0
 #
-  enablePasswordDB: true
+  enablePasswordDB: false
 #  staticPasswords:
 #   - email: "admin@example.com"
 #     # bcrypt hash of the string "password"
