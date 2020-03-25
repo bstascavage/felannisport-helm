@@ -9,7 +9,7 @@ installCRDs: true
 
 global:
   image:
-    repository: argoproj/argocd
+    repository: konkube/argocd
     tag: v1.4.0
     imagePullPolicy: IfNotPresent
   securityContext: {}
